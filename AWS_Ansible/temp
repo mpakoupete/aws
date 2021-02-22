@@ -1,0 +1,126 @@
+
+ok: [localhost] => {
+    "msg": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/libexec/platform-python"
+        },
+        "changed": false,
+        "failed": false,
+        "instances": [
+            {
+                "ami_launch_index": 0,
+                "architecture": "x86_64",
+                "block_device_mappings": [
+                    {
+                        "device_name": "/dev/xvda",
+                        "ebs": {
+                            "attach_time": "2021-02-21T19:39:35+00:00",
+                            "delete_on_termination": true,
+                            "status": "attached",
+                            "volume_id": "vol-055517dab23fee6be"
+                        }
+                    }
+                ],
+                "capacity_reservation_specification": {
+                    "capacity_reservation_preference": "open"
+                },
+                "client_token": "WebApp",
+                "cpu_options": {
+                    "core_count": 1,
+                    "threads_per_core": 1
+                },
+                "ebs_optimized": false,
+                "ena_support": true,
+                "hibernation_options": {
+                    "configured": false
+                },
+                "hypervisor": "xen",
+                "image_id": "ami-047a51fa27710816e",
+                "instance_id": "i-0b465df5af7933076",
+                "instance_type": "t2.micro",
+                "key_name": "AWS_EC2_KEY",
+                "launch_time": "2021-02-21T19:39:34+00:00",
+                "metadata_options": {
+                    "http_endpoint": "enabled",
+                    "http_put_response_hop_limit": 1,
+                    "http_tokens": "optional",
+                    "state": "applied"
+                },
+                "monitoring": {
+                    "state": "disabled"
+                },
+                "network_interfaces": [
+                    {
+                        "association": {
+                            "ip_owner_id": "amazon",
+                            "public_dns_name": "ec2-34-227-93-236.compute-1.amazonaws.com",
+                            "public_ip": "34.227.93.236"
+                        },
+                        "attachment": {
+                            "attach_time": "2021-02-21T19:39:34+00:00",
+                            "attachment_id": "eni-attach-0bbfee4ed4a77331c",
+                            "delete_on_termination": true,
+                            "device_index": 0,
+                            "status": "attached"
+                        },
+                        "description": "",
+                        "groups": [
+                            {
+                                "group_id": "sg-0b289014935504026",
+                                "group_name": "WebApp-sec"
+                            }
+                        ],
+                        "interface_type": "interface",
+                        "ipv6_addresses": [],
+                        "mac_address": "06:8f:ac:4d:88:01",
+                        "network_interface_id": "eni-07f5c3ea82b556587",
+                        "owner_id": "423555515684",
+                        "private_dns_name": "ip-172-31-58-123.ec2.internal",
+                        "private_ip_address": "172.31.58.123",
+                        "private_ip_addresses": [
+                            {
+                                "association": {
+                                    "ip_owner_id": "amazon",
+                                    "public_dns_name": "ec2-34-227-93-236.compute-1.amazonaws.com",
+                                    "public_ip": "34.227.93.236"
+                                },
+                                "primary": true,
+                                "private_dns_name": "ip-172-31-58-123.ec2.internal",
+                                "private_ip_address": "172.31.58.123"
+                            }
+                        ],
+                        "source_dest_check": true,
+                        "status": "in-use",
+                        "subnet_id": "subnet-a1d51190",
+                        "vpc_id": "vpc-fb2fe286"
+                    }
+                ],
+                "placement": {
+                    "availability_zone": "us-east-1e",
+                    "group_name": "",
+                    "tenancy": "default"
+                },
+                "private_dns_name": "ip-172-31-58-123.ec2.internal",
+                "private_ip_address": "172.31.58.123",
+                "product_codes": [],
+                "public_dns_name": "ec2-34-227-93-236.compute-1.amazonaws.com",
+                "public_ip_address": "34.227.93.236",
+                "root_device_name": "/dev/xvda",
+                "root_device_type": "ebs",
+                "security_groups": [
+                    {
+                        "group_id": "sg-0b289014935504026",
+                        "group_name": "WebApp-sec"
+                    }
+                ],
+                "source_dest_check": true,
+                "state": {
+                    "code": 16,
+                    "name": "running"
+                },
+                "state_transition_reason": "",
+                "subnet_id": "subnet-a1d51190",
+                "tags": {},
+                "virtualization_type": "hvm",
+                "vpc_id": "vpc-fb2fe286"
+

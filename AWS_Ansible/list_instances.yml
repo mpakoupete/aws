@@ -1,0 +1,35 @@
+---
+  - hosts: localhost
+    connection: local
+    gather_facts: False
+
+    vars_files:
+        secret/aws_access.yml
+
+    vars:
+       key_name: AWS_EC2_KEY
+       region: us-east-1
+       image: ami-047a51fa27710816e
+       id: WebApp
+       sec_group: "{{ id }}-sec"
+
+    tasks:
+       - name: Facts
+         block:
+            - name: Get instances Facts
+              ec2_instance_facts:
+                  aws_access_key: "{{ACCESS_KEY}}" 
+                  aws_secret_key: "{{ACCESS_SECRET_KEY}}"
+                  region: "{{region}}"
+              register: ec2_result
+
+       - name: Provision EC2 instances
+         debug:
+            msg: "{{ec2_result}}"
+
+       - name: Get Ip adresses
+         debug:
+            msg: "{{item.public_ip_address}}"
+         with_items:
+            - "{{ec2_result.instances}}"
+
