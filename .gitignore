@@ -1,5 +1,4 @@
 
 #Secret files
 AWS_Ansible/secret/aws_vault.txt
-AWS_Ansible/secret/.ssh/AWS_EC2_KEY
-AWS_Ansible/secret/.ssh/AWS_EC2_KEY.pub
+AWS_Ansible/secret/.ssh
